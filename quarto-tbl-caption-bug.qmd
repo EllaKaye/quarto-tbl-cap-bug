@@ -1,0 +1,13 @@
+---
+title: "Quarto table caption bug"
+format: html
+---
+
+```{r}
+#| label: tbl-bug
+#| tbl-cap: "I shouldn't see this caption since `eval: false` is set and no table in printed."
+#| eval: false
+data.frame(x = 1:3, y = 4:6) |> 
+  knitr::kable()
+```
+
